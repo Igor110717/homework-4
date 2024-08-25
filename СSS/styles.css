@@ -157,7 +157,7 @@ ul {
 .hero-title {
   color: var(--primary-white-color);
   margin-top: 0px;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
@@ -166,9 +166,26 @@ ul {
   text-transform: uppercase;
 }
 .hero {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid tomato;
   background-color: var(--footer-bg-color);
-  /* outline: 1px solid tomato; */
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
   text-align: center;
+
+  display: flex; /* Включаем Flexbox */
+  flex-direction: column; /* Размещаем элементы вертикально */
+  justify-content: center; /* Центрируем элементы по вертикали */
+  align-items: center;
 }
 
 /* section */
@@ -194,6 +211,27 @@ ul {
 }
 .features .item {
   /* background-color: tomato; */
+}
+
+.features .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bg-color);
+}
+.icon-antena::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-vector::before {
+  background-image: url(../images/Vector.svg);
+}
+.icon-diogram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 
 .features .item + .item {
@@ -251,6 +289,10 @@ ul {
 .team-list .item {
   text-align: center;
   padding-bottom: 30px;
+  border-radius: 4px;
+  /* outline: 1px solid tomato; */
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
 .team-list .item + .item {
